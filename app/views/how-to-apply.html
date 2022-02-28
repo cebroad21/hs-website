@@ -1,0 +1,250 @@
+{% extends 'layout.html' %}
+
+<!-- some custom css for the home page only -->
+{% set containerClasses = 'app-width-container--full' %}
+{% set mainClasses = 'app-main-wrapper--no-padding app-homepage' %}
+
+{% block pageTitle %}
+  The NHS website - NHS
+{% endblock %}
+
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/nhsuk.css" rel="stylesheet">
+{% endblock %}
+
+<!-- NHS.UK header -->
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHS homepage">
+
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+
+        <span class="nhsuk-header__service-name">
+          Get help to buy food and milk (Healthy Start)
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="hs-homepage">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="how-to-apply">
+            How to apply
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="what-youll-get">
+            What you'll get and how to shop
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="help-with-your-card">
+            Help with your card or vouchers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="getting-vitamins">
+            Getting vitamins 
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="retailers">
+            Retailers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="healthcare-professionals">
+            Healthcare professionals
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="contact-us">
+            Contact us
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+
+
+
+<!-- Homepage content -->
+{% block content %}
+
+
+
+<!-- How to apply-->
+<div class="nhsuk-width-container"><ol class="nhsuk-breadcrumb__list">
+  <li class="nhsuk-breadcrumb__item"><a href="hs-homepage.html">Home</a></li>
+  <li class="nhsuk-breadcrumb__item current">How to apply</li></ol> <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="https://www.healthystart.nhs.uk"> Back to  Home
+  </a>
+  </p>
+</div>
+<section class="nhsuk-section">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-section__content">
+        <div class="nhsuk-u-reading-width">
+          <h1>How to apply</h1>
+          <h2>Eligibility</h2>
+        </div>
+        <div class="nhsuk-u-reading-width">
+          <p>You’ll qualify for the Healthy Start scheme if you’re at least 10 weeks pregnant or you have at least one child that’s under 4.</p>
+          <p>In addition, you must be receiving any of the following:</p>
+          <ul>
+            <li>Child Tax Credit (only if your family’s annual income is £16,190 or less)</li>
+            <li>Income Support</li>
+            <li>Income-based Jobseeker’s Allowance</li>
+            <li>Pension Credit (which includes the child addition)</li>
+            <li>Universal Credit (only if your family’s take-home pay is £408 or less per month from employment)</li>
+          </ul>
+          <p>You will also be eligible for Healthy Start if:</p>
+          <ul>
+            <li>you’re under 18 and pregnant, even if you are not claiming any benefits</li>
+            <li>you claim income-related Employment and Support Allowance (ESA) and are over 10 weeks pregnant</li>
+            <li>you, your partner or your carer get Working Tax Credit run-on only after you have reported you’re working 16 hours or less per week</li>
+          </ul>
+          <p>To find out if your family earns £408 or less per month from employment whilst claiming Universal Credit, look at your ‘take-home pay for this period’ on your monthly Universal Credit award notice.</p>
+          <h2 id="how-to-apply"><strong>How to apply</strong></h2>
+
+
+
+<p><strong>If you get a qualifying benefit and are more than 10 weeks pregnant or have parental responsibility for at least one child under 4 years old</strong></p>
+
+
+
+<p>You can apply online. To apply, you will need your:</p>
+<ul>
+  <li>name</li>
+  <li>address</li>
+  <li>date of birth</li>
+  <li>National Insurance number</li>
+  <li>baby’s due date (if you’re pregnant)</li>
+  <li>benefit award letter if you’re over 18 (you must enter the same information that’s on this letter)</li>
+</ul>
+<p>If you’re currently receiving paper vouchers for Healthy Start, these will stop once you complete the online application. You can still use your Healthy Start vouchers until their expiry date. You can find the expiry date printed on your vouchers.</p>
+<div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
+    <h3>
+        <span class="nhsuk-u-visually-hidden">Information:</span>
+        If you live in Scotland
+    </h3>
+    <p>You cannot get Healthy Start. You can get help from <a href="https://www.mygov.scot/best-start-grant-best-start-foods" target="_blank" rel="noopener">Best Start Foods (opens in a new tab)</a> instead.</p>
+</div>
+<p><a href="https://services.nhsbsa.nhs.uk/apply-for-healthy-start/"><button class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit">Apply now</button></a></p>
+<h3 id="check-if-you-re-eligible">Check if you’re eligible</h3>
+<p>You can check if you’re eligible by applying now.</p>
+<p>Use the <a rel="noreferrer noopener" href="https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start" data-type="URL" data-id="https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start" target="_blank">check what help you could get to pay for NHS costs online service (opens in a new tab)</a> to see if you’re eligible for other help with NHS costs. </p>
+<h2 id="if-you-re-not-a-british-citizen-but-your-child-is">If you’re not a British citizen but your child is</h2>
+<p>You might be able to get Healthy Start vouchers depending on your immigration status.</p>
+<p>You can get Healthy Start vouchers if all the following are true:</p>
+<ul>
+  <li>you have at least 1 British child under 4 years old –&nbsp;<a rel="noreferrer noopener" href="https://www.gov.uk/check-british-citizenship" target="_blank">check if your child is automatically a British citizen (opens in a new tab)</a>&nbsp;if you’re not sure</li><li>your family earns £408 or less per month after tax</li><li>you cannot claim&nbsp;<a href="https://www.gov.uk/government/publications/public-funds--2">‘public funds</a><a href="https://www.gov.uk/government/publications/public-funds--2" target="_blank" rel="noreferrer noopener">’ (opens in a new tab)</a>&nbsp;(for example, benefits) – either because of your immigration status or because you do not have an immigration status</li></ul>
+  <p>Your biometric residence permit (BRP) or your&nbsp;<a href="https://www.gov.uk/view-prove-immigration-status" target="_blank" rel="noreferrer noopener">online immigration status (opens in a new tab)</a>&nbsp;will say if you cannot claim public funds. You might also have a letter from the Home Office about it.</p>
+  <p>To get Healthy Start vouchers, ask for an application form via email. Only use this email address if you think you cannot claim public funds because of your immigration status.</p>
+  <p><a href="mailto:Healthystartclaim@dhsc.gov.uk">Healthystartclaim@dhsc.gov.uk</a></p>
+</div>
+
+
+
+<div class="wp-block-nhsblocks-onethird nhsuk-grid-column-one-third">
+<div class="wp-block-nhsblocks-promo1 nhsuk-card nhsuk-card--clickable">
+<figure class="wp-block-image size-large"><img width="690" height="459" src="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg" alt="A child with knife and fork in hand about to eat a plate of vegetables" class="wp-image-5682" srcset="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg 690w, https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1-300x200.jpg 300w" sizes="(max-width: 690px) 100vw, 690px"></figure>
+<div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthystart.nhs.uk/frequently-asked-questions/" class="nhsuk-card__link">Frequently asked questions</a></h2><div class="nhsuk-card__description"><p>Frequently asked questions that people may have about the Healthy Start scheme</p></div></div></div>
+</div>
+</div></div>
+          
+            
+          
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+<!-- NHS.UK footer -->
+{% block footer %}
+<footer>
+	<div class="nhsuk-footer" id="nhsuk-footer">
+		<div class="nhsuk-width-container">
+					<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+		<ul class="nhsuk-footer__list">
+			<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/accessibility-statement-healthy-start-website">Accessibility statement</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/contact-us/">Contact us</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/privacy-policy/">Privacy policy and cookies</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/terms-and-conditions/">Terms and conditions</a></li>		</ul>
+
+		<p class="nhsuk-footer__copyright">
+	© Copyright,
+	Get help to buy food and milk (Healthy Start)	2022</p>
+
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+
+<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
+{% block pageScripts %}
+<script>
+  $( document ).ready(function() {
+    $('a[href=""], button.nhsuk-search__submit').click(function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}

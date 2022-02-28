@@ -1,0 +1,231 @@
+{% extends 'layout.html' %}
+
+<!-- some custom css for the home page only -->
+{% set containerClasses = 'app-width-container--full' %}
+{% set mainClasses = 'app-main-wrapper--no-padding app-homepage' %}
+
+{% block pageTitle %}
+  The NHS website - NHS
+{% endblock %}
+
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/nhsuk.css" rel="stylesheet">
+{% endblock %}
+
+<!-- NHS.UK header -->
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHS homepage">
+
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+
+        <span class="nhsuk-header__service-name">
+          Get help to buy food and milk (Healthy Start)
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="hs-homepage">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="how-to-apply">
+            How to apply
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="what-youll-get">
+            What you'll get and how to shop
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="help-with-your-card">
+            Help with your card or vouchers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="getting-vitamins">
+            Getting vitamins 
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="retailers">
+            Retailers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="healthcare-professionals">
+            Healthcare professionals
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="contact-us">
+            Contact us
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+
+
+
+<!-- Homepage content -->
+{% block content %}
+
+
+
+<!-- How to apply-->
+<div class="nhsuk-width-container"><ol class="nhsuk-breadcrumb__list">
+  <li class="nhsuk-breadcrumb__item"><a href="hs-homepage.html">Home</a></li>
+  <li class="nhsuk-breadcrumb__item current">How to apply</li></ol> <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="https://www.healthystart.nhs.uk"> Back to  Home
+  </a>
+  </p>
+</div>
+<section class="nhsuk-section">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-section__content">
+        <div class="nhsuk-u-reading-width">
+          <h1>Getting vitamins</h1>
+          <p>We are moving from paper vouchers to the Healthy Start card. We will send the last paper vouchers out on the week starting the 7th March. You can still use any valid vouchers to get free vitamins.</p>
+        </div>
+
+        <div class="nhsuk-u-reading-width">
+          <h2>Why you should get your free Healthy Start vitamins</h2>
+          <p>Young children may not get enough vitamin A and D even if they are eating well. If you are pregnant and breastfeeding you may not get enough vitamin C or D or folic acid.</p>
+          <p>You can use your Healthy Start card to get these important vitamins for free. These come as NHS Healthy Start tablets and drops for children.</p>
+          <p>They do not contain milk, egg, gluten, soya or peanut residues. They’re suitable for vegetarians and halal diets.</p>
+          <p>You can get the vitamin tablets while you’re pregnant and up to your baby’s 1st birthday. They contain:</p>
+          <ul><li>folic acid which lowers the chance of babies having spinal problems</li>
+              <li>vitamin C which helps the body’s soft tissue</li>
+              <li>vitamin D which helps babies’ bones to develop properly</li>
+          </ul>
+          <p>Children can take vitamin drops if they:</p>
+          <ul><li>are less than 4 years old</li>
+              <li>have less than 500ml (about one pint) of infant formula a day – as formula already has vitamins added to it</li>
+          </ul>
+
+          <p>Healthy Start vitamins come as an 8-week supply of:</p>
+          <ul><li>56 tablets (a daily dose of 1 tablet)</li>
+              <li>280 drops (a daily dose of 5 drops)</li>
+          </ul>
+          <p>You or your children should not take more than the recommended amount.</p>
+          <p>Find out more about the vitamins you and your baby need and why (opens in a new tab).</p>
+          <h2>How to get free vitamins if you live in England</h2>
+          <p>Ask your midwife or health visitor where to get your free vitamins.</p>
+          <p>You can also find who stocks Healthy Start vitamins in your local area (opens in a new tab).</p>
+          <p>To collect your free vitamins, you’ll have to show your Healthy Start card or vouchers.</p>
+          <h2>How to get free vitamins if you live in Wales</h2>
+          <p>You can collect free vitamins at your local health board. You will need to show your Healthy Start card or vouchers.</p>
+          <h2>How to get free vitamins if you live in Northern Ireland and have a Healthy Start card</h2>
+          <p>If you are eligible, we will send you a letter explaining how to request your free vitamins. We will check your request and send your order to the Business Services Organisation (opens in a new tab) in Northern Ireland. They will then post the vitamins to you.</p>
+          <h2>How to get free vitamins if you live in Northern Ireland and have valid paper vouchers</h2>
+          <p>Put your vitamin vouchers and the Healthy Start letter that comes with them in an envelope. Send the envelope to:</p>
+          <p>Business Services Organisation<br>Healthy Start vitamin scheme<br>Pinewood Villa<br>73 Loughgall Road<br>Armagh<br>BT61 7PR</p>
+          <p>The Business Services Organisation (opens in a new tab) will then post the vitamins to you.</p>
+
+
+         
+
+
+<div class="wp-block-nhsblocks-onethird nhsuk-grid-column-one-third">
+<div class="wp-block-nhsblocks-promo1 nhsuk-card nhsuk-card--clickable">
+<figure class="wp-block-image size-large"><img width="690" height="459" src="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg" alt="A child with knife and fork in hand about to eat a plate of vegetables" class="wp-image-5682" srcset="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg 690w, https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1-300x200.jpg 300w" sizes="(max-width: 690px) 100vw, 690px"></figure>
+<div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthystart.nhs.uk/frequently-asked-questions/" class="nhsuk-card__link">Frequently asked questions</a></h2><div class="nhsuk-card__description"><p>Frequently asked questions that people may have about the Healthy Start scheme</p></div></div></div>
+</div>
+</div></div>
+          
+            
+          
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+<!-- NHS.UK footer -->
+{% block footer %}
+<footer>
+	<div class="nhsuk-footer" id="nhsuk-footer">
+		<div class="nhsuk-width-container">
+					<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+		<ul class="nhsuk-footer__list">
+			<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/accessibility-statement-healthy-start-website">Accessibility statement</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/contact-us/">Contact us</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/privacy-policy/">Privacy policy and cookies</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/terms-and-conditions/">Terms and conditions</a></li>		</ul>
+
+		<p class="nhsuk-footer__copyright">
+	© Copyright,
+	Get help to buy food and milk (Healthy Start)	2022</p>
+
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+
+<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
+{% block pageScripts %}
+<script>
+  $( document ).ready(function() {
+    $('a[href=""], button.nhsuk-search__submit').click(function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}

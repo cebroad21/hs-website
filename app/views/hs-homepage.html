@@ -1,0 +1,239 @@
+{% extends 'layout.html' %}
+
+<!-- some custom css for the home page only -->
+{% set containerClasses = 'app-width-container--full' %}
+{% set mainClasses = 'app-main-wrapper--no-padding app-homepage' %}
+
+{% block pageTitle %}
+  The NHS website - NHS
+{% endblock %}
+
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/nhsuk.css" rel="stylesheet">
+{% endblock %}
+
+<!-- NHS.UK header -->
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHS homepage">
+
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+
+        <span class="nhsuk-header__service-name">
+          Get help to buy food and milk (Healthy Start)
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="hs-homepage">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="how-to-apply">
+            How to apply
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="what-youll-get">
+            What you'll get and how to shop
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="help-with-your-card">
+            Help with your card or vouchers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="getting-vitamins">
+            Getting vitamins 
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="retailers">
+            Retailers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="healthcare-professionals">
+            Healthcare professionals
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="contact-us">
+            Contact us
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+
+
+
+<!-- Homepage content -->
+{% block content %}
+
+<!-- hero image and "We're here for you" content -->
+
+<section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description">
+    <script>
+      function randomImage() {
+          var images =[
+            "/images/nhsuk/homepage/hs_veg.jpg",
+           
+          ];
+          var size = images.length;
+          var x = Math.floor(size * Math.random());
+          var element = document.getElementsByClassName('nhsuk-hero--image');
+          if (element.length > 0) {
+              element[0].style["background-image"] = "url(" + images[x] + ")";
+          }
+      }
+      document.addEventListener("DOMContentLoaded", randomImage);
+  </script>
+  <div class="nhsuk-hero__overlay">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero-content">
+            <h1 class="nhsuk-u-margin-bottom-3">Get help to buy food and milk</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">(the Healthy Start scheme)</p>
+            <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- What is Healthy Start?-->
+
+<section class="nhsuk-section">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-section__content">
+        <div class="nhsuk-u-reading-width">
+          <h2>What is Healthy Start?</h2>
+        </div>
+        <div class="nhsuk-u-reading-width">
+          <p>If you’re more than 10 weeks pregnant or have a child under 4, you may be entitled to get help to buy healthy food and milk.</p>
+          <p>If you’re eligible, you’ll be sent a Healthy Start card with money on it that you can use in some UK shops. We’ll add your benefit onto this card every 4 weeks.</p>
+          <p>You can use your card to buy:</p>
+          <ul>
+            <li>plain liquid cow’s milk</li>
+            <li>fresh, frozen, and tinned fruit and vegetables</li>
+            <li>fresh, dried, and tinned pulses</li>
+            <li>infant formula milk based on cow’s milk</li>
+          </ul>
+          <p>You can also use your card to collect:</p>
+          <ul>
+            <li>Healthy Start vitamins – these support you during pregnancy and breastfeeding</li>
+            <li>vitamin drops for babies and young children – these are suitable from birth to 4 years old</li>
+          </ul>
+          <div class="nhsuk-inset-text nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-5">
+            <h3>
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                If you live in Scotland
+            </h3>
+            <p>You can get help from <a href="https://www.mygov.scot/best-start-grant-best-start-foods" target="_blank" rel="noopener">Best Start Foods (opens in a new tab)</a> instead.</p>
+          </div>
+            
+            
+            <h2>Advice on healthy eating</h2>
+            <p>For more advice on healthy eating, visit:</p>
+            <ul>
+              <li><a href="https://www.nhs.uk/start4life" target="_blank" rel="noreferrer noopener">NHS start4life (opens in a new tab)</a></li>
+              <li><a href="https://www.nhs.uk/change4life" target="_blank" rel="noreferrer noopener">NHS change4life (opens in a new tab)</a></li>
+            </ul>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+<!-- NHS.UK footer -->
+{% block footer %}
+<footer>
+	<div class="nhsuk-footer" id="nhsuk-footer">
+		<div class="nhsuk-width-container">
+					<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+		<ul class="nhsuk-footer__list">
+			<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/accessibility-statement-healthy-start-website">Accessibility statement</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/contact-us/">Contact us</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/privacy-policy/">Privacy policy and cookies</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/terms-and-conditions/">Terms and conditions</a></li>		</ul>
+
+		<p class="nhsuk-footer__copyright">
+	© Copyright,
+	Get help to buy food and milk (Healthy Start)	2022</p>
+
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+
+<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
+{% block pageScripts %}
+<script>
+  $( document ).ready(function() {
+    $('a[href=""], button.nhsuk-search__submit').click(function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}

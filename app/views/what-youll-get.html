@@ -1,0 +1,264 @@
+{% extends 'layout.html' %}
+
+<!-- some custom css for the home page only -->
+{% set containerClasses = 'app-width-container--full' %}
+{% set mainClasses = 'app-main-wrapper--no-padding app-homepage' %}
+
+{% block pageTitle %}
+  The NHS website - NHS
+{% endblock %}
+
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/nhsuk.css" rel="stylesheet">
+{% endblock %}
+
+<!-- NHS.UK header -->
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo"><a class="nhsuk-header__link nhsuk-header__link--service " href="/" aria-label="NHS homepage">
+
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+          <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+
+        <span class="nhsuk-header__service-name">
+          Get help to buy food and milk (Healthy Start)
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="hs-homepage">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="how-to-apply">
+            How to apply
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="what-youll-get">
+            What you'll get and how to shop
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="help-with-your-card">
+            Help with your card or vouchers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="getting-vitamins">
+            Getting vitamins 
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="retailers">
+            Retailers
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="healthcare-professionals">
+            Healthcare professionals
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="contact-us">
+            Contact us
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+
+
+
+<!-- Homepage content -->
+{% block content %}
+
+
+
+<!-- How to apply-->
+<div class="nhsuk-width-container"><ol class="nhsuk-breadcrumb__list">
+  <li class="nhsuk-breadcrumb__item"><a href="hs-homepage.html">Home</a></li>
+  <li class="nhsuk-breadcrumb__item current">How to apply</li></ol> <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="https://www.healthystart.nhs.uk"> Back to  Home
+  </a>
+  </p>
+</div>
+<section class="nhsuk-section">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-section__content">
+        <div class="nhsuk-u-reading-width">
+          <h1>What you'll get and how to shop</h1>
+          <h2>How much you'll get</h2>
+        </div>
+        <div class="nhsuk-u-reading-width">
+         <p>You’ll get money added onto your card every 4 weeks to spend on certain food and milk</p>
+         <p>You'll get:</p>
+         <ul><li>£4.25 each week of your pregnancy from the 10th week</li>
+             <li>£8.50 each week for children from birth to 1</li>
+             <li>£4.25 each week for children between 1 and 4</li>
+        </ul>
+        <p>Your money will stop when your child is 4, or if you no longer receive benefits.</p>
+        <p>You can also get free vitamins with your card.</p>
+
+        <h2>Shopping with your card</h2>
+        <p>The first time you use your card you’ll need to insert your card and use your PIN. After that, you can make contactless payments. You cannot add your card to your phone's wallet app.</p>
+        <p>When you use contactless four times in a row, you'll need to use your PIN on the next transaction.</p>
+        <h3>Where to shop</h3>
+        <p>You can use your card in most places that sell milk, infant formula, fruit, and vegetables.</p>
+        <p>They must display a Mastercard® symbol. The symbol is normally shown on the shop door or at the till. Ask an employee inside the shop if they take Mastercard if you’re unsure.</p>
+        <p>If you try to spend the money anywhere else the card will be declined. For example at a fast-food restaurant.</p>
+        <p>You cannot use your Healthy Start card online or to withdraw cash from an ATM.</p>
+        <h3>How to shop</h3>
+        <p>You can only use your card to pay for <healthy food and milk>[jump link to What you can buy section]. You can also only spend up to the balance of your card.</p>
+        <p>You can split payments between your Healthy Start card and your normal bank card or cash. Some shops will need to do this as separate transactions.</p>
+        <p>For example, if you have £10 on your Healthy Start card you could buy:</p>
+        <uL><li>£10 of healthy food and milk with your Healthy Start card only</li>
+            <li>£20 of healthy food and milk split equally between your Healthy Start card and your bank card or cash</li>
+            <li>£10 of healthy food and milk with your Healthy Start card and £10 of other goods with your bank card or cash</li></uL>
+        <p>At self-checkout machines you can only split payments between your Healthy Start card and cash, not another bank card.</p>
+        <p>Do not worry if you make a mistake when using your Healthy Start card to buy healthy food with other shopping. It will not affect your benefit payments.</p>
+        <h3>Refunds</h3>
+        <p>If you need to get a refund on something you’ve bought, you can get the refund in the same way as you would with any bank card. Go back to the shop with your items, your receipt and your Healthy Start card and ask for a refund.</p>
+        <h2>What you can buy</h2>
+        <p>You can only use your card to buy certain types of milk, infant formula, fruit and vegetables.</p>
+        <h3>Fruit and vegetables</h3>
+        <p>these can be:</p>
+        <ul><li>fresh or frozen or tinned</li>
+            <li>fresh, dried or tinned pulses</li>
+            <li>whole or chopped</li>
+            <li>packaged or loose</li>
+            <li>fruit in fruit juice, or fruit or vegetables in water</li>
+        </ul>
+        <p>They cannot:</p>
+        <ul><li>have added ingredients like fat (oil), salt, sugar or flavourings, such as tinned tomatoes and herbs, kidney beans in chilli sauce, chips or onion rings</li>
+            <li>juiced or pre-cooked</li>
+            <li>fruits in syrup</li>
+            <li>be smoothies</li></ul>
+            <h3>Plain cow's milk</h3>
+        <p>This need to be plain cow’s milk, which is pasteurised, sterilised, long-life or ultra-heat treated (UHT).</p>
+        <p>It cannot be:</p>
+        <ul><li>flavoured
+        </li>
+      <li>coloured
+      </li>
+    <li>evaporated
+    </li>
+  <li>condensed
+  </li>
+<li>plant-based milk
+</li>
+<li>powdered (unless it’s stage one infant formula)
+</li></ul>
+<h3>Infant formula</h3>
+<p>This must be:
+</p>
+<ul><li>stage one only (first infant formula)</li>
+<li>made from cow’s milk</li>
+<li>nutritionally complete</li>
+<p>Look for ‘complete nutrition’, ‘from birth’, ‘from birth to 6 months’, or ‘from birth to 12 months’ on the label.</p>
+<p>It cannot be follow-on formula or milk (‘from 6 months’, or ‘from 6 to 12 months’).</p>
+<p>You can find more about infant formula at NHS choices (opens in a new tab).</p>
+</ul>
+whole or chopped
+packaged or loose
+fruit in fruit juice, or fruit or vegetables in water
+<div class="wp-block-nhsblocks-onethird nhsuk-grid-column-one-third">
+<div class="wp-block-nhsblocks-promo1 nhsuk-card nhsuk-card--clickable">
+<figure class="wp-block-image size-large"><img width="690" height="459" src="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg" alt="A child with knife and fork in hand about to eat a plate of vegetables" class="wp-image-5682" srcset="https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1.jpg 690w, https://www.healthystart.nhs.uk/wp-content/uploads/2021/03/beneficiaries-1-300x200.jpg 300w" sizes="(max-width: 690px) 100vw, 690px"></figure>
+<div class="nhsuk-card__content"><h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="https://www.healthystart.nhs.uk/frequently-asked-questions/" class="nhsuk-card__link">Frequently asked questions</a></h2><div class="nhsuk-card__description"><p>Frequently asked questions that people may have about the Healthy Start scheme</p></div></div></div>
+</div>
+</div></div>
+          
+            
+          
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+<!-- NHS.UK footer -->
+{% block footer %}
+<footer>
+	<div class="nhsuk-footer" id="nhsuk-footer">
+		<div class="nhsuk-width-container">
+					<h2 class="nhsuk-u-visually-hidden">Support links</h2>
+		<ul class="nhsuk-footer__list">
+			<li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhsbsa.nhs.uk/accessibility-statement-healthy-start-website">Accessibility statement</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/contact-us/">Contact us</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/privacy-policy/">Privacy policy and cookies</a></li><li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.healthystart.nhs.uk/terms-and-conditions/">Terms and conditions</a></li>		</ul>
+
+		<p class="nhsuk-footer__copyright">
+	© Copyright,
+	Get help to buy food and milk (Healthy Start)	2022</p>
+
+		</div>
+	</div>
+</footer>
+{% endblock %}
+
+
+<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
+{% block pageScripts %}
+<script>
+  $( document ).ready(function() {
+    $('a[href=""], button.nhsuk-search__submit').click(function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}
