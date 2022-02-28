@@ -7462,3 +7462,14 @@ b {
     line-height: 1.2;
   }
 }
+
+.nhsuk-card figure {
+  margin: 0;
+}
+.nhsuk-card figure img {
+  height: auto;
+}
+
+.no-padding {
+  padding: 0;
+}
