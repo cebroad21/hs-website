@@ -7473,3 +7473,32 @@ b {
 .no-padding {
   padding: 0;
 }
+
+.nhsuk-header a.nhsuk-header__link--service {
+  display: contents;
+  float: left;
+}
+
+.nhsuk-header__custom {
+  float: left;
+  padding-left: 16px;
+  padding-top: 3px;
+}
+
+@media (max-width: 40.0525em) {
+  .nhsuk-header__custom {
+    padding-top: 4px;
+    width: 200px !important;
+  }
+}
+@media (min-width: 61.865em) {
+  .nhsuk-header__custom {
+    padding-left: 16px;
+    padding-top: 3px;
+    width: auto !important;
+  }
+
+  .nhsuk-header__service-name {
+    max-width: 220px;
+  }
+}
